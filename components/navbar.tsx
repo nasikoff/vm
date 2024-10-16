@@ -51,7 +51,7 @@ export const Navbar = () => {
   return (
 
     <>
-    <NextUINavbar maxWidth="xl" position="sticky">
+    <NextUINavbar maxWidth="xl" className="fixed top-0">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
@@ -88,17 +88,18 @@ export const Navbar = () => {
       
 <div  className="w-auto justify-evenly flex gap-4 justify-start ml-2 px-5 py-4 bg-content1  outline-none bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none">
 {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
+            <NavbarItem key={item.href} className="flex justify-center w-[60px]" style={{backdropFilter:"none"}}>
               <NextLink
               
                 className={clsx(
-                  linkStyles({ color: "foreground" }),
+                 
                   "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
-                color="foreground"
+              
                 href={item.href}
-              >
-                {item.label}
+              > 
+              <div className="">{item.svg}</div>
+                
               </NextLink>
             </NavbarItem>
           ))}
