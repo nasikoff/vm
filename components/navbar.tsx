@@ -32,7 +32,7 @@ export const Navbar = () => {
 
   return (
     
-    <>
+ 
     
     
     
@@ -85,7 +85,7 @@ export const Navbar = () => {
 
     
     
-    </>
+ 
 
 
 
