@@ -14,7 +14,7 @@ import { Link } from "@nextui-org/link";
 import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
-import { usePathname } from "next/navigation";
+
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
@@ -25,14 +25,14 @@ import {
  
   Logo,
 } from "@/components/icons";
-
+import { usePathname } from "next/navigation";
 
 export const Navbar = () => {
- 
+  const pathUrl = usePathname();
 
   return (
     
- 
+    <>
     
     
     
@@ -58,18 +58,18 @@ export const Navbar = () => {
         <ThemeSwitch />
 
       </NavbarContent>
-      <NavbarContent  justify="center" className="w-full bg-transparent" style={{backdropFilter:"none"}}>
-      
-   
-            </NavbarContent>
+
     </NextUINavbar>
     
-     
+    <NextUINavbar maxWidth="xl" className="fixed bottom-5 top-[auto] bg-transparent" style={{backdropFilter:"none"}}>
 
-
-    
-    
+<NavbarContent  justify="center" className="w-full bg-transparent" style={{backdropFilter:"none"}}>
+      
  
+      </NavbarContent>
+    </NextUINavbar>
+    
+    </>
 
 
 
