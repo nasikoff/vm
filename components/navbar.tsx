@@ -28,7 +28,7 @@ import {
 
 
 export const Navbar = () => {
-  const pathUrl = usePathname();
+ 
 
   return (
     
@@ -64,16 +64,7 @@ export const Navbar = () => {
                 {siteConfig.navItems.map((item) => (
                   <NavbarItem className="flex justify-center w-[60px]" style={{backdropFilter:"none"}}>
       
-                    <NextLink
-                      className={pathUrl === item.href
-                        ? "text-[#338EF7] content-navi "
-                        : "opacity-70 "} 
-                      color="foreground"
-                      href={item.href}
-      
-                    >
-                      <div className="">{item.svg}</div> 
-                    </NextLink>
+                 
                   </NavbarItem>
                 ))}
               </div>
