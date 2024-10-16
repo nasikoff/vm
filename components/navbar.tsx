@@ -73,16 +73,14 @@ export const Navbar = () => {
 {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href} className="flex justify-center w-[60px]" style={{backdropFilter:"none"}}>
               <NextLink
-              
-                className={clsx(
-                 
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
-                )}
-              
+                className={pathUrl == item.href
+                  ? "text-[#338EF7] content-navi "
+                  : "opacity-70 "} 
+                color="foreground"
                 href={item.href}
-              > 
-              <div className="">{item.svg}</div>
-                
+
+              >
+                <div className="">{item.svg}</div> 
               </NextLink>
             </NavbarItem>
           ))}
