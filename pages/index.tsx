@@ -19,7 +19,7 @@ import React from "react";
 
 
 export default function IndexPage() {
-  const [selected, setSelected] = React.useState("photos");
+ 
   const colors = [
     "primary",
   ];
@@ -136,9 +136,9 @@ export default function IndexPage() {
       {colors.map((color) => (
       <Tabs 
         aria-label="Options"         
-        selectedKey={selected}
+       
          key={color} color="primary" radius="full"
-        onSelectionChange={setSelected}
+         
       >
         <Tab key="photos" title="Photos">
           <Card>
