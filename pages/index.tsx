@@ -138,7 +138,7 @@ export default function IndexPage() {
         aria-label="Options"         
         selectedKey={selected}
          key={color} color="primary" radius="full"
-        
+        onSelectionChange={setSelected}
       >
         <Tab key="photos" title="Photos">
           <Card>
