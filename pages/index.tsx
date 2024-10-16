@@ -42,10 +42,10 @@ export default function IndexPage() {
           </div>
           <div className="flex-auto w-80">
               <Swiper 
-              style={{'--swiper-navigation-color': '#fff','--swiper-pagination-color': '#fff',}}
+              
               navigation={true} 
               pagination={true} 
-              lazy={true}
+              
               modules={[Pagination, Navigation,]} 
               className="mySwiper">
               <SwiperSlide>
@@ -138,7 +138,7 @@ export default function IndexPage() {
         aria-label="Options"         
         selectedKey={selected}
          key={color} color="primary" radius="full"
-        onSelectionChange={setSelected}
+        
       >
         <Tab key="photos" title="Photos">
           <Card>
