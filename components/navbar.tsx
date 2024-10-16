@@ -2,28 +2,18 @@ import {
   Navbar as NextUINavbar,
   NavbarContent,
  
-  NavbarMenuToggle,
   NavbarBrand,
   NavbarItem,
  
 } from "@nextui-org/navbar";
  
  
-import { Link } from "@nextui-org/link";
  
-import { link as linkStyles } from "@nextui-org/theme";
 import NextLink from "next/link";
-import clsx from "clsx";
-import { usePathname } from "next/navigation";
+ 
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
- 
- 
-  Logo,
+import {Logo,
 } from "@/components/icons";
 
 
