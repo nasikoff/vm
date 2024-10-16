@@ -25,7 +25,8 @@ export default function IndexPage() {
         </div>
 
         <div className="flex gap-3">
-        
+           
+           
         </div>
 
         <div className="mt-8">
