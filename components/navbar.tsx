@@ -77,7 +77,7 @@ export const Navbar = () => {
                 href={item.href}
 
               >
-                <div className="">{item.svg}</div> 
+                <div className=""></div> 
               </NextLink>
             </NavbarItem>
           ))}
