@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 .content-navi::after{
-    content: ' \002D';
+    content: ' \002E';
      height: 0;
     font-size: 40px;
     position: relative;
@@ -11,7 +11,7 @@
     left: 0;
     right: 0;
     display: block;
-    bottom: 9px;
+    bottom: 15px;
 }
 
 .swiper {
