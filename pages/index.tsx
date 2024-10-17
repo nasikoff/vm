@@ -25,8 +25,13 @@ export default function IndexPage() {
   ];
   return (
     <DefaultLayout>
-        <section className="flex pt-8 md:pt-10">
-          <div  className="flex-auto w-36 inline-block max-w-xl text-left justify-center">
+        <section className="block md:hidden pt-8 md:pt-10">
+              <span className={title()}>Добро пожаловать в&nbsp;</span>
+              <br />
+              <span className={title({ color: "blue" })} style={{textTransform: "uppercase", fontFamily: "Kanit", }} >VillaMogoh&nbsp;</span>
+        </section>
+        <section className="flex pt-4 md:pt-10">
+          <div className="hidden xl:block md:block lg:block sm:hidden flex-auto w-36 inline-block max-w-xl text-left justify-center">
               <span className={title()}>Добро пожаловать в&nbsp;</span>
               <br />
               <span className={title({ color: "blue" })} style={{textTransform: "uppercase", fontFamily: "Kanit", }} >VillaMogoh&nbsp;</span>
@@ -40,7 +45,7 @@ export default function IndexPage() {
                 Забронировать
               </Button>
           </div>
-          <div className="flex-auto w-80">
+          <div className="flex-auto w-full  sm:w-80">
               <Swiper 
               
               navigation={true} 
@@ -76,8 +81,8 @@ export default function IndexPage() {
               <Card  className="mt-5 rounded-3xl border-solid border-2 border-default bg-[#000] text-white">
                 <CardBody >
                     <div className="flex flex-row" >
-                      <div className="basis-1/5  text-3xl text-left font-bold pl-5">190+</div>
-                      <div className="basis-4/5 text-3xl text-right font-extralight pr-5" style={{ fontFamily: "Jost",  }}>Довольных клиентов
+                      <div className="basis-1/5  text-xl sm:text-3xl text-left font-bold pl-5">190+</div>
+                      <div className="basis-4/5 text-xl sm:text-3xl text-right font-extralight pr-5" style={{ fontFamily: "Jost",  }}>Довольных гостей
                     </div>
           </div>
           </CardBody>
