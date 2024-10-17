@@ -39,6 +39,22 @@
     object-fit: cover;
   }
 
+
+  .swiper-lazy-preloader {
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -21px;
+    margin-top: -21px;
+    z-index: 10;
+    transform-origin: 50%;
+    box-sizing: border-box;
+    border: none !important; 
+   
+}
+
   @media (width < 768px) {
     .swiper {
       height:300px;

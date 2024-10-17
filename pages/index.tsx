@@ -12,7 +12,7 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import {Button} from "@nextui-org/react";
+import {Button, CircularProgress, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger} from "@nextui-org/react";
 import {Card, CardHeader, CardBody, CardFooter, Image} from "@nextui-org/react";
 import {Tabs, Tab} from "@nextui-org/react";
 import React from "react";
@@ -28,22 +28,41 @@ export default function IndexPage() {
         <section className="block md:hidden pt-8 md:pt-10">
               <span className={title()}>Добро пожаловать в&nbsp;</span>
               <br />
-              <span className={title({ color: "blue" })} style={{textTransform: "uppercase", fontFamily: "Kanit", }} >VillaMogoh&nbsp;</span>
+              <span className={title({ color: "blue" })} style={{fontFamily: "Audiowide", }} >VillaMogoh&nbsp;</span>
         </section>
         <section className="flex pt-4 md:pt-10">
           <div className="hidden xl:block md:block lg:block sm:hidden flex-auto w-36 inline-block max-w-xl text-left justify-center">
               <span className={title()}>Добро пожаловать в&nbsp;</span>
               <br />
-              <span className={title({ color: "blue" })} style={{textTransform: "uppercase", fontFamily: "Kanit", }} >VillaMogoh&nbsp;</span>
+              <span className={title({ color: "blue" })} style={{fontFamily: "Audiowide", }} >VillaMogoh&nbsp;</span>
               <br />
               <p className="w-full md:w-11/12 my-2 text-lg lg:text-xl pt-6 pb-4 font-normal text-default-500 block max-w-full">VILLAMOGOH - идеальное место для отдыха в окружении природы. Наши уютные коттеджи с видом на величественные горы подарят вам незабываемые впечатления. <br/> Забронируйте свой отдых уже сегодня!</p>
               <br />
-              <Button color="primary">
-                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
-                    <path fill="currentColor" d="M17.5 16.5v2q0 .2.15.35T18 19t.35-.15t.15-.35v-2h2q.2 0 .35-.15T21 16t-.15-.35t-.35-.15h-2v-2q0-.2-.15-.35T18 13t-.35.15t-.15.35v2h-2q-.2 0-.35.15T15 16t.15.35t.35.15zM18 21q-2.075 0-3.537-1.463T13 16t1.463-3.537T18 11t3.538 1.463T23 16t-1.463 3.538T18 21M4 17V8q0-.475.213-.9t.587-.7l6-4.5q.275-.2.575-.3T12 1.5t.625.1t.575.3l6.05 4.55q.175.125.263.325t.087.425q0 .425-.288.713T18.6 8.2q-.175 0-.325-.05T18 8l-6-4.5L6 8v9h4q.425 0 .713.288T11 18t-.288.713T10 19H6q-.825 0-1.412-.587T4 17m8-6.75"/>
-                </svg>
-                Забронировать
-              </Button>
+
+
+              <Dropdown backdrop="blur">
+              <DropdownTrigger>
+                <Button color="primary">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
+                      <path fill="currentColor" d="M17.5 16.5v2q0 .2.15.35T18 19t.35-.15t.15-.35v-2h2q.2 0 .35-.15T21 16t-.15-.35t-.35-.15h-2v-2q0-.2-.15-.35T18 13t-.35.15t-.15.35v2h-2q-.2 0-.35.15T15 16t.15.35t.35.15zM18 21q-2.075 0-3.537-1.463T13 16t1.463-3.537T18 11t3.538 1.463T23 16t-1.463 3.538T18 21M4 17V8q0-.475.213-.9t.587-.7l6-4.5q.275-.2.575-.3T12 1.5t.625.1t.575.3l6.05 4.55q.175.125.263.325t.087.425q0 .425-.288.713T18.6 8.2q-.175 0-.325-.05T18 8l-6-4.5L6 8v9h4q.425 0 .713.288T11 18t-.288.713T10 19H6q-.825 0-1.412-.587T4 17m8-6.75"/>
+                  </svg>
+                  Забронировать
+                </Button>
+              </DropdownTrigger>
+              <DropdownMenu  aria-label="Static Actions">
+              <DropdownSection title="Выберите объекты" showDivider> 
+                <DropdownItem key="new">Сottege One</DropdownItem>
+                <DropdownItem key="copy">Сottege Two</DropdownItem>
+                <DropdownItem key="copy">Русская баня</DropdownItem>
+                <DropdownItem key="delete" className="text-danger" color="danger">
+                    Закрыть окно
+                </DropdownItem>
+                </DropdownSection>
+              </DropdownMenu>
+            </Dropdown>
+
+
+
           </div>
           <div className="flex-auto w-full  sm:w-80">
               <Swiper 
@@ -59,15 +78,15 @@ export default function IndexPage() {
                     loading="lazy"
                     alt="xsx"
                     />
-                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                <CircularProgress className="swiper-lazy-preloader absolute top-[50%] left-[50%] border-none" aria-label="Loading..." />
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                     src="/img/5.webp"
+                    src="/img/5.webp"
                     loading="lazy"
                     alt="xsx"
                     />
-                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                 <CircularProgress className="swiper-lazy-preloader absolute top-[50%] left-[50%] border-none" aria-label="Loading..." />
               </SwiperSlide>
               <SwiperSlide>
                 <img
@@ -75,7 +94,7 @@ export default function IndexPage() {
                     loading="lazy"
                     alt="xsx"
                     />
-                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                 <CircularProgress className="swiper-lazy-preloader absolute top-[50%] left-[50%] border-none" aria-label="Loading..." />
               </SwiperSlide>
               <SwiperSlide>
                 <img
@@ -83,7 +102,7 @@ export default function IndexPage() {
                     loading="lazy"
                     alt="xsx"
                     />
-                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                 <CircularProgress className="swiper-lazy-preloader absolute top-[50%] left-[50%] border-none" aria-label="Loading..." />
               </SwiperSlide>
               <SwiperSlide>
                 <img
@@ -91,7 +110,7 @@ export default function IndexPage() {
                     loading="lazy"
                     alt="xsx"
                     />
-                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                <CircularProgress className="swiper-lazy-preloader absolute top-[50%] left-[50%] border-none" aria-label="Loading..." />
               </SwiperSlide>
               
               </Swiper>
@@ -121,7 +140,7 @@ export default function IndexPage() {
                 <Card className="col-span-12 sm:col-span-4 h-[200px]">
                     <CardHeader className="absolute z-10 top-1 flex-col !items-start">
                       <p className="text-tiny text-white/60 uppercase font-bold"></p>
-                      <h4 className=" font-medium text-large uppercase">#РусскаяБаня</h4>
+                      <h4 className=" font-medium text-large uppercase">Русская баня</h4>
                     </CardHeader>
                     <Image
                       isZoomed
