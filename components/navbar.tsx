@@ -67,7 +67,7 @@ export const Navbar = () => {
 
     <NextUINavbar maxWidth="xl" className="fixed bottom-5 top-[auto] bg-transparent" style={{backdropFilter:"none"}}>
 
-<NavbarContent  justify="center" className="w-full bg-transparent" style={{backdropFilter:"none"}}>
+<NavbarContent  justify="center" className="w-full bg-transparent backdrop-opacity-0" style={{backdropFilter:"none"}}>
       
 <div  className="w-auto justify-evenly flex gap-4 justify-start ml-2 px-5 py-4 bg-content1  outline-none bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none">
 {siteConfig.navItems.map((item) => (

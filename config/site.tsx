@@ -2,8 +2,8 @@
 
  
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "VillaMogoh - Коттеджи с видом на горы",
+  description: "Мы предлагаем аренду коттеджей на любой срок, чтобы вы могли провести незабываемое время в окружении гор. Забронируйте свой отдых уже сегодня и откройте для себя новые горизонты комфорта и природы!",
   navItems: [
     {
       label: "Главная",

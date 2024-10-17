@@ -13,7 +13,7 @@ export default function DefaultLayout({
     <div className="relative flex flex-col h-screen">
       <Head />
       <Navbar />
-      <main className="container mx-auto max-w-7xl px-2 sm:px-6 flex-grow pt-16">
+      <main className="container mx-auto max-w-7xl px-3 sm:px-6 flex-grow pt-16">
         {children}
       </main>
        

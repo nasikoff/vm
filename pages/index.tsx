@@ -36,7 +36,7 @@ export default function IndexPage() {
               <br />
               <span className={title({ color: "blue" })} style={{textTransform: "uppercase", fontFamily: "Kanit", }} >VillaMogoh&nbsp;</span>
               <br />
-              <p className="w-full md:w-11/12 my-2 text-lg lg:text-xl pt-6 pb-4 font-normal text-default-500 block max-w-full">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta blanditiis iste officiis pariatur illum nostrum velit fugit quo repudiandae ipsa et dolor aperiam rerum corrupti repellendus aliquam, ipsum tenetur consequuntur!</p>
+              <p className="w-full md:w-11/12 my-2 text-lg lg:text-xl pt-6 pb-4 font-normal text-default-500 block max-w-full">VILLAMOGOH - идеальное место для отдыха в окружении природы. Наши уютные коттеджи с видом на величественные горы подарят вам незабываемые впечатления. <br/> Забронируйте свой отдых уже сегодня!</p>
               <br />
               <Button color="primary">
                 <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24">
@@ -55,7 +55,7 @@ export default function IndexPage() {
               className="mySwiper">
               <SwiperSlide>
                 <img
-                    src="https://mnogoneba.com/img/ApartLuxeOne/3.jpg"
+                    src="/img/4.webp"
                     loading="lazy"
                     alt="xsx"
                     />
@@ -63,7 +63,7 @@ export default function IndexPage() {
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                    src="https://mnogoneba.com/img/ApartLuxeOne/3.jpg"
+                     src="/img/5.webp"
                     loading="lazy"
                     alt="xsx"
                     />
@@ -71,13 +71,40 @@ export default function IndexPage() {
               </SwiperSlide>
               <SwiperSlide>
                 <img
-                    src="https://mnogoneba.com/img/ApartLuxeOne/3.jpg"
+                     src="/img/1.webp"
                     loading="lazy"
                     alt="xsx"
                     />
                 <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
               </SwiperSlide>
+              <SwiperSlide>
+                <img
+                     src="/img/2.webp"
+                    loading="lazy"
+                    alt="xsx"
+                    />
+                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <img
+                     src="/img/3.webp"
+                    loading="lazy"
+                    alt="xsx"
+                    />
+                <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+              </SwiperSlide>
+              
               </Swiper>
+              
+              <Card className="mt-5 block md:hidden ">
+      <CardBody>
+        <p><b>VILLAMOGOH</b> - идеальное место для отдыха в окружении природы. Наши уютные коттеджи с видом на величественные горы подарят вам незабываемые впечатления. <br/> Забронируйте свой отдых уже сегодня!</p>
+      </CardBody>
+    </Card>
+              
+              
+              
+              
               <Card  className="mt-5 rounded-3xl border-solid border-2 border-default bg-[#000] text-white">
                 <CardBody >
                     <div className="flex flex-row" >
@@ -87,23 +114,25 @@ export default function IndexPage() {
           </div>
           </CardBody>
           </Card>
+
+
           <div className="mt-5 grid grid-cols-2 gap-4">
               <div>
                 <Card className="col-span-12 sm:col-span-4 h-[200px]">
                     <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-                      <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
-                      <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
+                      <p className="text-tiny text-white/60 uppercase font-bold"></p>
+                      <h4 className=" font-medium text-large uppercase">#РусскаяБаня</h4>
                     </CardHeader>
                     <Image
                       isZoomed
                       removeWrapper
                       alt="Card background"
                       className="z-0 w-full h-full object-cover"
-                      src="https://nextui.org/images/card-example-4.jpeg"
+                      src="/img/s.png"
                       />
                     <CardFooter className="justify-between py-1 absolute before:rounded-xl rounded-large bottom-1 ml-1 z-10">
-                      <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg" size="sm">
-                      Перейти
+                      <Button className="text-tiny bg-black/20" variant="flat" color="default" radius="lg" size="sm">
+                      Подробнее
                       </Button>
                     </CardFooter>
                 </Card>
