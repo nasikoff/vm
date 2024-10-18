@@ -3,7 +3,7 @@ import { Snippet } from "@nextui-org/snippet";
 import { Code } from "@nextui-org/code";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from 'swiper/modules';
+import { FreeMode, Pagination } from 'swiper/modules';
 import { Navigation } from 'swiper/modules';
 import "swiper/css";
 import 'swiper/css/pagination';
@@ -12,7 +12,7 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
-import {Button, CircularProgress, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger} from "@nextui-org/react";
+import {Button, Chip, CircularProgress, Dropdown, DropdownItem, DropdownMenu, DropdownSection, DropdownTrigger} from "@nextui-org/react";
 import {Card, CardHeader, CardBody, CardFooter, Image} from "@nextui-org/react";
 import {Tabs, Tab} from "@nextui-org/react";
 import React from "react";
@@ -71,7 +71,7 @@ export default function IndexPage() {
               pagination={true} 
               
               modules={[Pagination, Navigation,]} 
-              className="mySwiper">
+              className="mySwiper01">
               <SwiperSlide>
                 <img
                     src="/img/4.webp"
@@ -159,19 +159,19 @@ export default function IndexPage() {
               <div >
                 <Card className="col-span-12 sm:col-span-4 h-[200px]">
                     <CardHeader className="absolute z-10 top-1 flex-col !items-start">
-                      <p className="text-tiny text-white/60 uppercase font-bold">What to watch</p>
-                      <h4 className="text-white font-medium text-large">Stream the Acme event</h4>
+                       
+                    <h4 className=" font-medium text-large uppercase">Мы здесь</h4>
                     </CardHeader>
                     <Image
                       isZoomed
                       removeWrapper
                       alt="Card background"
                       className="z-0 w-full h-full object-cover"
-                      src="https://nextui.org/images/card-example-3.jpeg"
+                       src="/img/maps.png"
                       />
                     <CardFooter className="justify-between py-1 absolute before:rounded-xl rounded-large bottom-1 ml-1 z-10">
                       <Button className="text-tiny text-white bg-black/20" variant="flat" color="default" radius="lg" size="sm">
-                      Перейти
+                      Построить маршрут
                       </Button>
                     </CardFooter>
                 </Card>
@@ -179,51 +179,139 @@ export default function IndexPage() {
           </div>
           </div>
         </section>
-        <section className="pt-8 pb-24 md:pt-10 md:pb-24">
+        <section className="pt-8 md:pt-10">
 
           <h2 className="linked-heading text-2xl">
             <span>Наши объекты</span>
           </h2>
 
-    <div className="flex w-full flex-col mt-5">
-      {colors.map((color) => (
-      <Tabs 
-        aria-label="Options"         
-       
-         key={color} color="primary" radius="full"
-         
+          <div className="flex w-full flex-col mt-5">
+          <Swiper 
+        slidesPerView={'auto'}
+        spaceBetween={15}
+        freeMode={true}
+        modules={[FreeMode, Pagination]}
+        className="mySwiper02"
       >
-        <Tab key="photos" title="Все">
-          <Card>
-            <CardBody>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-            </CardBody>
-          </Card>  
-        </Tab>
+      
+      <SwiperSlide className="max-w-[400px]">
+        <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
+      <CardHeader className="absolute z-10 top-1 flex-col items-start">
+      <h4 className="text-white font-medium text-xl">Сottege One</h4>
+        <p className="text-tiny text-white/80 uppercase font-bold">Дагестан, с. Могох</p>
+    
+      </CardHeader>
+      <Image
+        removeWrapper
+        alt="Relaxing app background"
+        className="z-0 w-full h-full object-cover"
+        src="/img/1.webp"
+      />
+      <CardFooter className="absolute bg-black/40 bottom-0 z-10  ">
+        <div className="flex flex-grow gap-2 items-center">
+          
+          <div className="flex flex-col">
+             
+          <h4 className="text-white font-medium text-xl">₽15000<small className="text-white/80">/сутки</small></h4>
+          
+          </div>
+        </div>
+        <Button radius="full" size="sm">Подробнее</Button>
+      </CardFooter>
+    </Card>
 
-        <Tab key="music" title="Коттеджи">
-          <Card>
-            <CardBody>
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </CardBody>
-          </Card>  
-        </Tab>
 
-        <Tab key="videos" title="Баня">
-          <Card>
-            <CardBody>
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </CardBody>
-          </Card>  
-        </Tab>
 
-      </Tabs>
-       ))}
-    </div>  
+
+
+
+        </SwiperSlide>
+
+        <SwiperSlide className="max-w-[400px]">
+        <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
+      <CardHeader className="absolute z-10 top-1 flex-col items-start">
+      <h4 className="text-white font-medium text-xl">Сottege Two</h4>
+        <p className="text-tiny text-white/80 uppercase font-bold">Дагестан, с. Могох</p>
+    
+      </CardHeader>
+      <Image
+        removeWrapper
+        alt="Relaxing app background"
+        className="z-0 w-full h-full object-cover"
+        src="/img/2.webp"
+      />
+      <CardFooter className="absolute bg-black/40 bottom-0 z-10  ">
+        <div className="flex flex-grow gap-2 items-center">
+          
+          <div className="flex flex-col">
+             
+          <h4 className="text-white font-medium text-xl">₽15000<small className="text-white/80">/сутки</small></h4>
+          
+          </div>
+        </div>
+        <Button radius="full" size="sm">Подробнее</Button>
+      </CardFooter>
+    </Card>
+
+
+
+
+
+
+        </SwiperSlide>
+
+        
+        <SwiperSlide className="max-w-[400px]">
+        <Card isFooterBlurred className="w-full h-[300px] col-span-12 sm:col-span-7">
+      <CardHeader className="absolute z-10 top-1 flex-col items-start">
+      <h4 className="text-white font-medium text-xl">Russian Bathhouse</h4>
+        <p className="text-tiny text-white/80 uppercase font-bold">Дагестан, с. Могох</p>
+    
+      </CardHeader>
+      <Image
+        removeWrapper
+        alt="Relaxing app background"
+        className="z-0 w-full h-full object-cover"
+        src="/img/6.jpeg"
+      />
+      <CardFooter className="absolute bg-black/40 bottom-0 z-10  ">
+        <div className="flex flex-grow gap-2 items-center">
+          
+          <div className="flex flex-col">
+             
+          <h4 className="text-white font-medium text-xl">₽1000<small className="text-white/80">/час</small></h4>
+          
+          </div>
+        </div>
+        <Button radius="full" size="sm">Подробнее</Button>
+      </CardFooter>
+    </Card>
+
+
+
+
+
+
+        </SwiperSlide>
+      
+         
+         
+      </Swiper>
+          </div>  
 
 
 
         </section>
+
+
+       <section className="pt-8 pb-24 md:pt-10 md:pb-24">
+        <h2 className="linked-heading text-2xl">
+              <span>Какие удобства мы предлагаем</span>
+            </h2>
+       </section>
+
+
+
     </DefaultLayout>
   );
 }
