@@ -202,7 +202,6 @@ export default function IndexPage() {
     
       </CardHeader>
       <Image
-        isZoomed
         removeWrapper
         alt="Relaxing app background"
         className="z-0 w-full h-full object-cover"
@@ -236,7 +235,6 @@ export default function IndexPage() {
     
       </CardHeader>
       <Image
-        isZoomed
         removeWrapper
         alt="Relaxing app background"
         className="z-0 w-full h-full object-cover"
@@ -271,7 +269,6 @@ export default function IndexPage() {
     
       </CardHeader>
       <Image
-        isZoomed
         removeWrapper
         alt="Relaxing app background"
         className="z-0 w-full h-full object-cover"

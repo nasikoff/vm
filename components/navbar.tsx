@@ -70,7 +70,7 @@ export const Navbar = () => {
 
 <NavbarContent  justify="center" className="w-full bg-transparent backdrop-opacity-10" style={{backdropFilter:"none"}}>
       
-<div  className="w-auto items-center justify-evenly flex gap-4 justify-start ml-2 px-5 py-4 bg-content1  outline-none bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none">
+<div  className="w-auto items-center justify-evenly flex gap-4 justify-start px-4 py-4    outline-none bg-content1 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none">
 {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href} className="flex justify-center w-[60px]" style={{backdropFilter:"none"}}>
               <NextLink
