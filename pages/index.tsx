@@ -191,7 +191,7 @@ return (
                   <CardFooter className="absolute bg-black/40 bottom-0 z-10  ">
                      <div className="flex flex-grow gap-2 items-center">
                         <div className="flex flex-col">
-                           {priceOne.map((item, index) => ( 
+                           {priceOne.map((item) => ( 
                            <h4 className="text-white font-medium text-xl">{item.price}<small className="text-white/80">/час</small></h4>
                            ))}
                         </div>
@@ -215,7 +215,7 @@ return (
                   <CardFooter className="absolute bg-black/40 bottom-0 z-10  ">
                      <div className="flex flex-grow gap-2 items-center">
                         <div className="flex flex-col">
-                           {priceTwo.map((item, index) => ( 
+                           {priceTwo.map((item) => ( 
                            <h4 className="text-white font-medium text-xl">{item.price}<small className="text-white/80">/час</small></h4>
                            ))}
                         </div>
@@ -239,7 +239,7 @@ return (
                   <CardFooter className="absolute bg-black/40 bottom-0 z-10  ">
                      <div className="flex flex-grow gap-2 items-center">
                         <div className="flex flex-col">
-                           {priceBany.map((item, index) => ( 
+                           {priceBany.map((item) => ( 
                            <h4 className="text-white font-medium text-xl">{item.price}<small className="text-white/80">/час</small></h4>
                            ))}
                         </div>
@@ -251,8 +251,91 @@ return (
          </Swiper>
       </div>
    </section>
+   {/*Секция "Почему выбирают нас/Что мы предлагаем" */}
+   <section className="pt-8 md:pt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+         <div>
+            <h2 className="linked-heading text-2xl">
+               <span>Почему выбирают нас</span>
+            </h2>
+            <div className="gap-4 grid grid-cols-2 sm:grid-cols-2 mt-5">
+               {list.map((item, index) => (
+               <Card shadow="sm" key={index} >
+                  <CardBody className="overflow-visible p-0">
+                     <Image
+                        shadow="sm"
+                        radius="lg"
+                        width="100%"
+                        alt={item.title}
+                        className="w-full object-cover h-[140px]"
+                        src={item.img}
+                        />
+                  </CardBody>
+                  <CardFooter className="text-small justify-between">
+                     <b>{item.title}</b>
+                  </CardFooter>
+               </Card>
+               ))}
+            </div>
+         </div>
+         <div>
+            <h2 className="linked-heading text-2xl">
+               <span>Что мы предлагаем</span>
+            </h2>
+
+            <div className="gap-4 grid grid-cols-1 lg:grid-cols-2 mt-5">
+               {listtwo.map((item, index) => (
+               <Card key={index}>
+                  <CardHeader className="flex gap-5 p-[15px] pl-5">
+                     <IconWrapper className="bg-primary/10 text-primary">
+                        {item.svg}
+                     </IconWrapper>
+                     <div className="flex flex-col">
+                        <p className="text-md font-semibold">{item.title}</p>
+                     </div>
+                  </CardHeader>
+               </Card>
+               ))}
+            </div>
+            
+         </div>
+      </div>
+   </section>
+   {/*Секция "Контакты" */}
+   <section className="pt-8 md:pt-10 md:pb-24 pb-24">
+      <h2 className="linked-heading text-2xl">
+         <span>Наши контакты</span>
+      </h2>
+
+      <div className="mt-5 flex flex-col md:flex-row">
+          
+     
+      <div className="flex-auto w-full md:w-64">
  
- 
+      </div>
+          
+          
+      <div className="flex-auto w-full md:w-36 mt-5 pl-0 md:pl-16">
+      {contacts.map((item, html) => (
+               <Card key={html} className="rounded-none bg-transparent outline-none shadow-none divide-x">
+                <NextLink href={item.href}>
+                  <CardHeader className="flex gap-5 p-[15px] pl-5">
+                     <IconWrapper className="bg-default/10 text-secundary">
+                        {item.svg}
+                     </IconWrapper>
+                     <div className="flex flex-col">
+                        <p className="text-md font-semibold">{item.title}</p>
+                     </div>
+                  </CardHeader>
+                  </NextLink>
+               </Card>
+               ))}
+      </div>
+          
+       
+        
+      </div>
+   </section>
 </DefaultLayout>
 );
 }
