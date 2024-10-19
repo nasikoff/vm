@@ -312,7 +312,13 @@ return (
           
      
       <div className="flex-auto w-full md:w-64">
-      <iframe  id="" src="https://yandex.ru/map-widget/v1/?um=constructor%3A6335f8acd1220368f602308808ddf0c3bfb498b2900e9700412d6e8337c173b6&amp;source=constructor"></iframe>
+      <Iframe url="https://yandex.ru/map-widget/v1/?um=constructor%3A6335f8acd1220368f602308808ddf0c3bfb498b2900e9700412d6e8337c173b6&amp;source=constructor"
+        width="640px"
+        height="320px"
+        id=""
+        className=""
+        display="block"
+        position="relative"/>
       </div>
      
           
