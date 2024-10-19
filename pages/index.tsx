@@ -5,6 +5,7 @@ import { button as buttonStyles } from "@nextui-org/theme";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from 'swiper/modules';
 import { Navigation } from 'swiper/modules';
+import Iframe from 'react-iframe'
 import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
@@ -311,7 +312,7 @@ return (
           
      
       <div className="flex-auto w-full md:w-64">
-      <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A6335f8acd1220368f602308808ddf0c3bfb498b2900e9700412d6e8337c173b6&amp;source=constructor"></iframe>
+      <iframe  id="" src="https://yandex.ru/map-widget/v1/?um=constructor%3A6335f8acd1220368f602308808ddf0c3bfb498b2900e9700412d6e8337c173b6&amp;source=constructor"></iframe>
       </div>
      
           
